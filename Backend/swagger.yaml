@@ -5,6 +5,7 @@ info:
   version: 1.0.0
 servers:
   - url: http://localhost:5678/api/
+  
 paths:
   /users/login:
     post:

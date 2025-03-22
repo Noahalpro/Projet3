@@ -3,6 +3,78 @@
    License: none (public domain)
 */
 
+
+/* css rajouté par Noah 
+*/
+	/*login.html*/
+
+	#msgError {
+		display: none;
+	}
+	.espaceLogin {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		gap: 40px;
+	}
+
+	.espaceLogin form {
+		
+		display: flex;
+		flex-direction: column;
+	}
+
+	.espaceLogin form input {
+		
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+		border: none;
+		margin-bottom: 35px;
+		margin-top: 5px;
+		
+		height: 40px;
+		width: 350px;
+		font-size: 1.2em;
+	}
+
+
+a { 
+	text-decoration: none;
+
+}
+.filters {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	justify-content: center;
+}
+.button {
+	font-size: 16px;
+	background-color: white;
+	margin-bottom: 40px;
+	font-family: 'Syne';
+	padding-left: 10px;
+	padding-right: 10px;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: solid 1px #1D6154;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-width: 1px ;
+	min-width: 95px;
+	color: #1D6154;
+}
+
+.button:hover {
+	background-color: #1D6154;
+	color: white;
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -179,6 +251,7 @@ input[type="submit"]{
 	text-align: center;
 	border-radius: 60px ;
 }
+
 
 footer nav ul {
 	display: flex;
