@@ -1,5 +1,4 @@
 
-
 async function main() {
     try {
         let response = await fetch('http://localhost:5678/api/works')
@@ -82,4 +81,21 @@ function createFiltreBouton (categories,data) {
 
 main()
 
+window.addEventListener("DOMContentLoaded", function () {
+    console.log("noah")
+    const barreAdmin = document.querySelector(".barreAdmin");
+    const token = localStorage.getItem("token");
+    const userEmail = localStorage.getItem("userEmail");
+    console.log (userEmail)
 
+    if(userEmail === "sophie.bluel@test.tld") {
+    authLog = document.getElementById("authLog");
+    authLog.textContent = "Logout";
+    barreAdmin.style.display = "block";
+    console.log("barre admin affichée !");
+    }
+    else {
+        console.log("⚠️ Élément .barreAdmin non trouvé dans le HTML !");
+    }
+
+});

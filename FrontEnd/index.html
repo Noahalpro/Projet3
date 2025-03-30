@@ -9,17 +9,16 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
-	
-	<script src="assets/script.js"></script>
 </head>
 <body>
+<div class="barreAdmin"> Mode admin activé</div>
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
 			<li>projets</li>
 			<li>contact</li>
-			<li><a href="Login.html">Login</a></li>
+			<li><a href="Login.html" id="authLog">Login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -38,6 +37,31 @@
 	</section>
 	<section id="portfolio">
 		<h2>Mes Projets</h2>
+		<div class="sectionModifier">
+		<a href="#modalGallery" class="js-modal">modifier</a>
+		<aside id="modalGallery" class="modal" aria-hidden="true" role="dialog" style="display: none;"> 
+			<div class="modalBlock">
+				<button class="cross" alt="croix"></button>
+				<p class="titreModal">Galerie photo</p>
+				<img src="./assets/icons/icons8-effacer-50.png" class="poubelleIcon" alt="Effacer">
+				<div class="listePhoto"></div>
+				<span class="barreSeparation"></span>
+				<p id="msgError">Email ou mot de passe incorrect !</p>
+				<button class="bouttonAjoutPhoto">Ajouter une photo</button>
+			</div>
+		</aside>
+		<aside id="modalAjout" class="modal2" aria-hidden="true" role="dialog" style="display: none;"> 
+			<div class="modalBlockAjout">
+				<button class="cross" alt="croix"></button>
+				<p class="titreModal">Ajout Photo</p>
+				<img src="./assets/icons/icons8-effacer-50.png" class="poubelleIcon" alt="Effacer">
+				<div class="listePhoto"></div>
+				<span class="barreSeparation"></span>
+				<p id="msgError">Email ou mot de passe incorrect !</p>
+				<button class="bouttonAjoutPhoto">Ajouter une photo</button>
+			</div>
+		</aside>
+		</div>
 		<div class="filterContainer">
 			<div class="filters"></div>
 				
@@ -45,6 +69,7 @@
 		<div class="gallery">
 		</div>
 	</section>
+
 	<section id="contact">
 		<h2>Contact</h2>
 		<p>Vous avez un projet ? Discutons-en !</p>
@@ -67,5 +92,8 @@
 		</ul>
 	</nav>
 </footer>
+
+<script src="assets/modal.js"></script>
+<script src="assets/script.js"></script>
 </body>
 </html>
