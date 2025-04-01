@@ -8,11 +8,88 @@
 */
 	/*login.html*/
 
-	.bouttonAjoutPhoto {
+	.formAjoutPhoto {
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	.formAjoutPhoto input {
+		
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+		border: none;
+		margin-bottom: 35px;
+		margin-top: 5px;
+		
+		height: 30px;
+		width: 350px;
+		font-size: 1.2em;
+	}
+
+	.formAjoutPhoto select {
+		
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+		border: none;
+		margin-bottom: 35px;
+		margin-top: 5px;
+		
+		height: 30px;
+		width: 350px;
+		font-size: 1.2em;
+	}
+
+	.sectionAjoutPhoto {
+		background-color: lightblue;
+		width: 350px;
+		height: fit-content;
+		padding:15px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		column-gap: none;
+	}
+
+	.sectionAjoutPhoto img {
+		width: 60px;
+	}
+
+	.ajouterPhoto {
+		
+	font-family: 'Syne';
+	font-size: 12px;
+	color: lightskyblue;
+	background-color: lightgrey;
+	margin : 2em auto ;
+	width: 190px;
+	text-align: center;
+	border-radius: 60px ;
+	height: 30px;
+	border: none;
+
+	}
+
+	.ajouterPhoto input {
+		text-decoration: none;
+		border: none;
+	}
+
+
+	.sectionModifier {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
+	}
+
+	.validerPhoto {
 	font-family: 'Syne';
 	font-size: 12px;
 	color: white;
-	background-color: #1D6154;
+	background-color: grey;
 	margin : 2em auto ;
 	width: 190px;
 	text-align: center;
@@ -70,7 +147,21 @@
 		align-items: center;
 
 	}
+	.modal2 {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.6);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
 
+
+	}
 	.modalBlock {
 		border-radius: 10px;
 		background-color: white;
@@ -85,6 +176,24 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		position: relative;
+
+	}
+	.modalBlockAjout {
+		border-radius: 10px;
+		background-color: white;
+		width: 400px;
+		height: fit-content;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 50px;
+		padding-right: 50px;
+		gap: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
 		position: relative;
 
 	}

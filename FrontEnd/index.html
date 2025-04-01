@@ -54,11 +54,27 @@
 			<div class="modalBlockAjout">
 				<button class="cross" alt="croix"></button>
 				<p class="titreModal">Ajout Photo</p>
-				<img src="./assets/icons/icons8-effacer-50.png" class="poubelleIcon" alt="Effacer">
-				<div class="listePhoto"></div>
-				<span class="barreSeparation"></span>
-				<p id="msgError">Email ou mot de passe incorrect !</p>
-				<button class="bouttonAjoutPhoto">Ajouter une photo</button>
+				<form class="formAjoutPhoto">
+					<div class="sectionAjoutPhoto">
+						<img src="./assets/icons/free image icon png vector.svg" class="iconImage" alt="image">
+						
+ 						<label for="imageUpload">+ Ajouter Photo</label>
+						<input type="file" class="ajouterPhoto" name="image" accept="image/*" required>
+						<p>.jpg, .png : 4mo max.</p>
+					</div>
+					
+					<label for="title">Titre</label>
+					<input type="text" name="title">
+					<label for="category">Catégorie</label>
+					<select name="category" id="listecategories">
+
+					</select>
+					
+					<span class="barreSeparation"></span>
+					<p id="msgError">Email ou mot de passe incorrect !</p>
+					<button type="submit" class="validerPhoto">valider</button>
+
+				</form>
 			</div>
 		</aside>
 		</div>
