@@ -8,6 +8,102 @@
 */
 	/*login.html*/
 
+	.section-titre-modif {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	html {
+		height: 100%;
+	}
+
+	.iconImage {
+		fill: grey;
+	}
+
+	
+	#iconeinsta img {
+		padding-top: 5px;
+		width: 20px;
+		color: black;
+		font-weight: bold;
+	}
+
+	#imagePreview {
+		object-fit: cover;
+		width: fit-content;
+		max-width: 350px;
+		height: fit-content;
+		max-height: 200px;
+	}
+
+	li a {
+		color: black;
+	  }
+
+	li a.active {
+		font-weight: bold;
+	}
+
+	.bouttonAjoutPhoto {
+		font-family: 'Syne';
+	font-size: 12px;
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 190px;
+	text-align: center;
+	border-radius: 60px ;
+	height: 30px;
+	border-style: none;
+
+
+	}
+
+	.ajoutImageStyle{
+	padding-top: 10px;
+	font-size: 16px;
+	font-weight: 700;
+	color: rgb(46, 141, 200);
+	background-color: #bac5c9;
+	margin : 20px ;
+	width: 190px;
+	text-align: center;
+	border-radius: 60px ;
+	height: 30px;
+	border-style: none;
+
+		
+	}
+
+	.section-titre-modif {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 10px;
+	}
+	.adminicon {
+		display: none;
+		flex-direction: row;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	.section-titre-modif a {
+		margin-top: 10px;
+		color: black;
+	}
+
+
+
+	.iconmodif {
+		width: 20px;
+		height: fit-content;
+		object-fit: cover;
+		margin-top: 5px;
+	}
+
 	.formAjoutPhoto {
 		display: flex;
 		flex-direction: column;
@@ -41,7 +137,7 @@
 	}
 
 	.sectionAjoutPhoto {
-		background-color: lightblue;
+		background-color: rgb(236, 247, 255);
 		width: 350px;
 		height: fit-content;
 		padding:15px;
@@ -53,7 +149,8 @@
 	}
 
 	.sectionAjoutPhoto img {
-		width: 60px;
+		width: 70px;
+		margin: 0px;
 	}
 
 	.ajouterPhoto {
@@ -96,12 +193,42 @@
 	border-radius: 60px ;
 	height: 30px;
 	border: none;
+
+	}
+	.validerPhoto.ready {
+	font-family: 'Syne';
+	font-size: 12px;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 190px;
+	text-align: center;
+	border-radius: 60px ;
+	height: 30px;
+	border: none;
 	}
 
+	.flechegauche {
+		
+	background-image: url('./icons/fleche-pointant-vers-la-gauche.png');
+	background-repeat: no-repeat;
+  	background-position: center;
+  	background-size: contain;
+ 	 width: 40px;
+ 	 height: 40px;
+  	border: none;
+  	background-color: transparent;
+	width: 20px;
+	border-color: none;
+	position: absolute;
+	top: 5px;
+	left: 15px;
+
+	}
 
 	.cross {
-		background-image: url('./icons/crossclose.png');
-		background-repeat: no-repeat;
+	background-image: url('./icons/crossclose.png');
+	background-repeat: no-repeat;
   	background-position: center;
   	background-size: contain;
  	 width: 40px;
@@ -217,10 +344,8 @@
 	}
 
 	.barreAdmin {
-		display: flex;
+		padding-top: 10px;
 		text-align: center;
-		justify-content: center;
-		align-items: center;
 		width: 100%;
 		height: 30px;
 		background-color: black;
@@ -255,6 +380,7 @@
 		align-content: center;
 		align-items: center;
 		gap: 40px;
+		min-height: 700px;
 	}
 
 	.espaceLogin form {
@@ -288,7 +414,7 @@ a {
 }
 .button {
 	font-size: 16px;
-	background-color: white;
+	background-color:  rgb(255, 254, 247);
 	margin-bottom: 40px;
 	font-family: 'Syne';
 	padding-left: 10px;
@@ -339,6 +465,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: rgb(255, 254, 247);
 }
 ol, ul {
 	list-style: none;
@@ -357,15 +484,17 @@ table {
 }
 /** end reset css**/
 body {
-	max-width: 1140px;
-	margin:auto;
+	max-width: 100%;
+	margin: auto;
 	font-family: 'Work Sans' ;
 	font-size: 14px;
 }
 header {
 	display: flex;
 	justify-content: space-between;
-	margin: 50px 0
+	margin: 50px 0;
+	padding-left: 90px;
+	padding-right: 90px;
 }
 section {
 	margin: 50px 0
@@ -416,8 +545,7 @@ li:hover {
 }
 #introduction img {
 	display: block;
-	margin: auto;
-	width: 80%;
+	width: 90%;
 }
 
 #introduction article {
@@ -427,8 +555,19 @@ li:hover {
 	margin-bottom: 1em;
 }
 
+#introduction {
+	
+	margin-left: 150px;
+	margin-right: 150px;
+}
 #introduction p {
 	margin-bottom: 0.5em;
+
+}
+
+#portfolio {
+	margin-left: 150px;
+	margin-right: 150px;
 }
 #portfolio h2 {
 	text-align: center;
@@ -490,9 +629,14 @@ input[type="submit"]{
 }
 
 
-footer nav ul {
+footer  {
 	display: flex;
-	justify-content: flex-end;
-	margin: 2em
+	flex-direction: row;
+	justify-content: right;
+	background-color: white;
+}
+
+footer li {
+	padding: 10px;
 }
 

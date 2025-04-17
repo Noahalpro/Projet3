@@ -11,15 +11,18 @@
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-<div class="barreAdmin"> Mode admin activé</div>
+<div class="barreAdmin">
+	 
+	<p>Mode admin activé</p>
+</div>
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
-			<li>projets</li>
+			<li><a href="index.html"> projets</a></li>
 			<li>contact</li>
-			<li><a href="Login.html" id="authLog">Login</a></li>
-			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+			<li id="idBoutonLog"><a href="Login.html" id="authLog">Login</a></li>
+			<li id="iconeinsta"><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
 </header>
@@ -36,9 +39,17 @@
 		</article>
 	</section>
 	<section id="portfolio">
+	<div class="section-titre-modif">
 		<h2>Mes Projets</h2>
-		<div class="sectionModifier">
+		
+		<div class="adminicon">
+		<img src="./assets/icons/modifier.png" class="iconmodif" alt="modification">
 		<a href="#modalGallery" class="js-modal">modifier</a>
+		</div>
+		
+	</div>
+		<div class="sectionModifier">
+	
 		<aside id="modalGallery" class="modal" aria-hidden="true" role="dialog" style="display: none;"> 
 			<div class="modalBlock">
 				<button class="cross" alt="croix"></button>
@@ -52,27 +63,34 @@
 		</aside>
 		<aside id="modalAjout" class="modal2" aria-hidden="true" role="dialog" style="display: none;"> 
 			<div class="modalBlockAjout">
+				
+				<button class="flechegauche" alt="precedent" ><a href="#modalGallery" class="js-modal"></a></button>
 				<button class="cross" alt="croix"></button>
 				<p class="titreModal">Ajout Photo</p>
 				<form class="formAjoutPhoto">
 					<div class="sectionAjoutPhoto">
-						<img src="./assets/icons/free image icon png vector.svg" class="iconImage" alt="image">
+						<img src="./assets/icons/free image icon png vector.svg" class="iconImage" alt="image" fill="currentColor">
 						
- 						<label for="imageUpload">+ Ajouter Photo</label>
-						<input type="file" class="ajouterPhoto" name="image" accept="image/*" required>
+						<input type="file" class="ajouterPhoto" id="ajoutImage" accept="image/*"  name="image" style="display: none;">
+						
+						<label for="ajoutImage" class="ajoutImageStyle">+ Ajouter Photo</label>
+						<div class="preview-container">
+							<img id="imagePreview" style="display: none;" alt="Aperçu de l'image">
+						  </div>
 						<p>.jpg, .png : 4mo max.</p>
 					</div>
 					
-					<label for="title">Titre</label>
-					<input type="text" name="title">
+					<label for="title">Titre</label >
+					<input type="text" name="title" id="title" required>
 					<label for="category">Catégorie</label>
 					<select name="category" id="listecategories">
+	
 
 					</select>
 					
 					<span class="barreSeparation"></span>
-					<p id="msgError">Email ou mot de passe incorrect !</p>
-					<button type="submit" class="validerPhoto">valider</button>
+					<p id="msgError">Veuillez remplir tous les champs du formulaire</p>
+					<button type="submit" class="validerPhoto">Valider</button>
 
 				</form>
 			</div>

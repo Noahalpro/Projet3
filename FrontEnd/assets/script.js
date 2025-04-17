@@ -3,7 +3,6 @@ async function main() {
     try {
         let response = await fetch('http://localhost:5678/api/works')
         let data = await response.json()
-        //let categories = ["Tous", ...new Set(data.map(item => item.category))];
         let categories = getLstFilter(data);
         console.log(data)
         data.forEach(element => {
@@ -81,21 +80,49 @@ function createFiltreBouton (categories,data) {
 
 main()
 
+
+function event2(){
+
+const boutonlog = document.getElementById("idBoutonLog")
+boutonlog.addEventListener('click', () => {
+    if (localStorage.getItem("token")) {
+        localStorage.removeItem("token");
+        
+    } 
+    else {
+    
+        console.log ("noach")
+    }})
+}
+
+event2()
+
+    
 window.addEventListener("DOMContentLoaded", function () {
-    console.log("noah")
     const barreAdmin = document.querySelector(".barreAdmin");
     const token = localStorage.getItem("token");
-    const userEmail = localStorage.getItem("userEmail");
-    console.log (userEmail)
+    const boutonmodif = document.querySelector(".adminicon")
 
-    if(userEmail === "sophie.bluel@test.tld") {
+    if(token) {
     authLog = document.getElementById("authLog");
     authLog.textContent = "Logout";
+    const barreFiltre = document.querySelector(".filterContainer")
     barreAdmin.style.display = "block";
+    boutonmodif.style.display = "flex";
+    barreFiltre.style.display = "none";
     console.log("barre admin affichée !");
     }
     else {
-        console.log("⚠️ Élément .barreAdmin non trouvé dans le HTML !");
+        console.log("Élément .barreAdmin non trouvé dans le HTML !");
     }
 
+});
+
+const links = document.querySelectorAll("li a");
+const currentPage = window.location.pathname;
+
+links.forEach(link => {
+  if (link.getAttribute("href") === currentPage.split("/").pop()) {
+    link.classList.add("active");
+  }
 });
