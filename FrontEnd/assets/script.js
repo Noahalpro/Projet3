@@ -45,7 +45,16 @@ function createFiltreBouton (categories,data) {
     categories.forEach(category => {
         let button = document.createElement("button");
         button.textContent = category;
-        button.addEventListener("click", () => displayImages(data, category));
+        
+        button.addEventListener("click", () => {
+            const allButtons = document.querySelectorAll(".filters .button");
+            allButtons.forEach(b => b.classList.remove("active"));
+
+            button.classList.add("active");
+            displayImages(data, category)
+
+        
+        })
         filterContainer.appendChild(button);
         button.classList.add("button");
     });
@@ -91,7 +100,7 @@ boutonlog.addEventListener('click', () => {
     } 
     else {
     
-        console.log ("noach")
+        console.log ("il n'y a pas de token")
     }})
 }
 

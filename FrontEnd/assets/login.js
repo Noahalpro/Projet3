@@ -24,8 +24,6 @@ function seConnecterLogIn() {
 
         
         const data = await response.json();
-        localStorage.setItem("token", data.token);
-        localStorage.setItem("userEmail", TentativeLogIn.email);
 
         if (response.ok && data.token) {
             localStorage.setItem("token", data.token);

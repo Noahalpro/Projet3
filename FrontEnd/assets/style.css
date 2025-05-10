@@ -436,6 +436,12 @@ a {
 	background-color: #1D6154;
 	color: white;
 }
+.button.active {
+	background-color: #1D6154;
+	color: white;
+}
+
+
 
 
 html, body, div, span, applet, object, iframe,
